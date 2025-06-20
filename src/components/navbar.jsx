@@ -1,8 +1,13 @@
-import { useState } from "react"
+import { useState } from "react";
 import "../assets/css/navbar.css";
 
 function Navbar() {
-    
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <>
       <nav>
@@ -10,11 +15,18 @@ function Navbar() {
           <div className="logo-section" style={{ fontFamily: "High Cruiser" }}>
             <h1>MANISH.</h1>
           </div>
-          <div className="menu-section">
+
+          <div className="hamburger" onClick={toggleMenu}>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
+
+          <div className="desktop-menu">
             <ul>
-              <li name="avi">AVAILABLE ITEMS</li>
-              <li name="coll">COLLECTIONS</li>
-              <li name="search">
+              <li>AVAILABLE ITEMS</li>
+              <li>COLLECTIONS</li>
+              <li>
                 <div className="search-btn">
                   <input type="text" placeholder="SEARCH..." />
                   <i className="ph ph-magnifying-glass"></i>
@@ -22,16 +34,32 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          <div className="auth-section">
-            <div className="login" name="login">
-              LOGIN
-            </div>
 
-            <div className="sign-up" name="sign-up">
-              SIGN UP
-            </div>
+          <div className="auth-section desktop-auth">
+            <div className="login">LOGIN</div>
+            <div className="sign-up">SIGN UP</div>
           </div>
         </div>
+
+        {/* Mobile Menu - di luar container */}
+        {isMobileMenuOpen && (
+          <div className="mobile-menu">
+            <ul>
+              <li>AVAILABLE ITEMS</li>
+              <li>COLLECTIONS</li>
+              <li>
+                <div className="search-btn">
+                  <input type="text" placeholder="SEARCH..." />
+                  <i className="ph ph-magnifying-glass"></i>
+                </div>
+              </li>
+            </ul>
+            <div className="auth-section mobile-auth">
+              <div className="login">LOGIN</div>
+              <div className="sign-up">SIGN UP</div>
+            </div>
+          </div>
+        )}
       </nav>
     </>
   );

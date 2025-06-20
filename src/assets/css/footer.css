@@ -61,3 +61,38 @@
 .footer-columns-container li:hover {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    padding: 20px 10px;
+  }
+
+  .footer-columns-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .footer-columns-container .col {
+    width: 100%;
+    align-items: center;
+  }
+
+  .footer-columns-container p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-columns-container ul {
+    gap: 0.75rem;
+  }
+
+  .sign-up-btn a {
+    padding: 6px 16px;
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+}
