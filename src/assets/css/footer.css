@@ -1,0 +1,63 @@
+.footer-container {
+    background-color: #BF9264;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    cursor: default;
+}
+
+.logo, .sign-up-btn {
+    padding-bottom: 1.5rem;
+}
+
+.logo {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.sign-up-btn a {
+    text-decoration: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-columns-container {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+
+.footer-columns-container .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-columns-container p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
+
+.footer-columns-container ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-columns-container li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.footer-columns-container li:hover {
+    text-decoration: underline;
+}

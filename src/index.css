@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'High Cruiser';
+  src: url('../src/assets/fonts/HighCruiser-PersonalUseOnly.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
